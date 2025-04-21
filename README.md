@@ -1,4 +1,4 @@
-# ESP32 + MQTT
+# ESP32 + MQTT Setup instructions
 
 This project demonstrates basic MQTT communication using an ESP32, a local Mosquitto MQTT broker, a Node.js WebSocket server, and a real-time web dashboard.
 
