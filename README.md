@@ -60,8 +60,16 @@ idf.py monitor
 
 Start Mosquitto manually:
 
+In `mosquitto/mosquitto.conf` append this two lines:
 ```bash
-mosquitto -v
+listener 1883
+allow_anonymous true
+```
+
+Now run:
+
+```bash
+mosquitto -v -c 'C:\Program Files\mosquitto\mosquitto.conf'
 ```
 
 Make sure port 1883 is allowed through your Windows Firewall (Inbound rule for TCP port 1883).
@@ -79,6 +87,12 @@ If Mosquitto is running, you should see an output like this:
 
 ---
 ### MQTT Topic Subscription
+
+Subscrive to a topic:
+
+```bash
+mosquitto_sub -h YourComputerIPv4 -t test/topic
+```
 
 The Node.js server subscribes to a specific MQTT topic to receive messages published by the ESP32.
 
